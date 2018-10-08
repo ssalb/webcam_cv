@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="Display Webcam Stream" name="title">
+    <title>Display Webcam Stream</title>
+    <style>
+        #container {
+          position: absolute;
+          left: 20%;
+          top: 3%;
+          width: 60%;
+          height: 94%;
+          z-index: -1;
+          background-color: black;
+        }
+        video {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            background-color: black;
+            z-index: 0;
+            /* Mirror the local video */
+            transform: scale(-1, 1);            /*For Firefox (& IE)*/
+            -webkit-transform: scale(-1, 1);     /*for Chrome & Opera (& Safari)*/
+        }
+        canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+        body {
+            margin: 0;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <canvas id="drCanvas"></canvas>
+        <video autoplay="true" id="videoElement"></video>
+        <script src="/static/baseVideo.js"></script>
+        <script id="procVideo" src="/static/procVideo.js" data-source="videoElement"
+                data-apiServer="/api/obj_detect" data-mirror="true" data-scoreThreshold="0.60">
+        </script>
+    </div>
+</body>
+</html>
