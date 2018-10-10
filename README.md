@@ -8,7 +8,7 @@ This is a (Dockerised) demo for object detection and face recognition tasks in t
 
 First, of course, clone this repo ;).
 
-For the object detection part, you'll need to download the Yolov3 model. To this end, go to https://github.com/pjreddie/darknet/ and download  `data/coco.names` (rename it as `yolov3.names`) and `cfg/yolov3.cfg`. Also, download the pre-trained model weights from https://pjreddie.com/media/files/yolov3.weights. Save these 3 files under `yolo_v3/`.
+For the object detection part, you'll need to download the Yolov3 model. To this end, go to https://github.com/pjreddie/darknet/ and download  `data/coco.names` (rename it as `yolov3.names`) and `cfg/yolov3.cfg`. Also, download the pre-trained model weights from https://pjreddie.com/media/files/yolov3.weights. Save these 3 files under `yolo_v3/`. Alternatively, you could get these files using wget within the Dockerfile, if you don't mind downloading them every time you build the image.
 
 For the face recognition part, put your face images under `/local_data` in `jpg` format with the name you want displayed as the image name. For example `Alice.jpg` and `Bob.jpg` would be the images of Alice's and Bob's faces, respectively.
 
