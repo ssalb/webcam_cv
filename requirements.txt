@@ -4,6 +4,6 @@ face-recognition-models==0.3.0
 Flask==1.0.2
 gunicorn==19.9.0
 numpy==1.14.3
-opencv-contrib-python==3.4.2.17
+opencv-contrib-python==3.4.7.28
 opencv-python==3.4.2.17
 Pillow==8.1.1
